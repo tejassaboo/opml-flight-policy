@@ -53,14 +53,14 @@ cheaper (lines 297-299).
 | `orchard-tide` | easy | BOOK (india-flex) | LOWEST_FARE, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
 | `fennel-cairn` | easy | BOOK (amsterdam-flex) | LOWEST_FARE, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (127, 253-255) |
 | `saltmarsh-vigil` | easy | BOOK (american-flex) | LOWEST_FARE, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
-| `heron-quill` | boundary_twin | BOOK (british-flex nonstop) | DIRECT_OPTION_WITHIN_BUDGET | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (248-250) |
-| `pewter-rill` | boundary_twin | BOOK (dubai-flex) | DIRECT_OPTION_OVER_BUDGET, LOWEST_FARE | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (248-250) |
+| `heron-quill` | boundary_twin | BOOK (british-flex nonstop, or dubai-flex) | DIRECT_OPTION_WITHIN_BUDGET, LOWEST_FARE | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (248-250) |
+| `pewter-rill` | boundary_twin | BOOK (dubai-flex) | DIRECT_OPTION_OVER_BUDGET, LOWEST_FARE, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (248-250) |
 | `lumen-thicket` | boundary_twin | BOOK (singapore-premium) | CLIENT_PERMITS_PREMIUM_CABIN | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
-| `garnet-thistle` | boundary_twin | BOOK (singapore-flex) | PREMIUM_CABIN_NOT_PERMITTED | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
+| `garnet-thistle` | boundary_twin | BOOK (singapore-flex) | PREMIUM_CABIN_NOT_PERMITTED, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
 | `basalt-orrery` | boundary_twin | BOOK (newark-flex, United) | FLY_AMERICA_US_CARRIER_REQUIRED | NONE, PROJECT_MANAGER, CLIENT_OR_DONOR | FLIGHT_CARRIERS (272-274) |
 | `quartz-heddle` | boundary_twin | BOOK (dubai-flex) | LOWEST_FARE, FLEXIBLE_ECONOMY_POLICY | NONE, PROJECT_MANAGER, CLIENT_OR_DONOR | AIR_CLASS_AND_RATES (253-255) |
 | `sorrel-beacon` | multi_rule | BOOK (african-business) | PREMIUM_CABIN_APPROVED | NONE, LINE_MANAGER, CHIEF_FINANCIAL_OFFICER | AIR_CLASS_AND_RATES (255-262) |
-| `tansy-ledger` | multi_rule | BOOK (british-flex) | PREMIUM_CABIN_NOT_PERMITTED | NONE, LINE_MANAGER | AIR_CLASS_AND_RATES (255-262) |
+| `tansy-ledger` | multi_rule | BOOK (british-flex) | PREMIUM_CABIN_NOT_PERMITTED, FLEXIBLE_ECONOMY_POLICY | NONE, LINE_MANAGER | AIR_CLASS_AND_RATES (255-262) |
 | `wicket-moraine` | multi_rule | BOOK (turkish-flex) | URGENT_TRAVEL_APPROVED | NONE, PROJECT_MANAGER, TSSM | BOOKING_TRAVEL (117, 123) |
 | `ember-cistern` | multi_rule | BOOK (avianca-business) | CLIENT_PERMITS_PREMIUM_CABIN | NONE, PROJECT_MANAGER | AIR_CLASS_AND_RATES (253-255) |
 | `drover-paddock` | hidden_clause | REFUSE | COMMUTE_NOT_TRAVEL | NONE | DEFINITIONS (65-67, 89-92) |

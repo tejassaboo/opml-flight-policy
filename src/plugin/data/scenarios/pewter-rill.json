@@ -41,7 +41,9 @@
         "cabin": "NONE"
       }
     ],
-    "notes": []
+    "notes": [
+      "In OPM's booking tool, an economy fare marked refundable (changed or refunded without a fee) is the fare OPM's travel service providers sell as flexible economy; an economy fare that is not refundable is a restricted saver fare."
+    ]
   },
   "world": {
     "searches": [
@@ -144,6 +146,7 @@
     "reason_codes": [
       "ALTERNATE_ROUTE_TOO_EXPENSIVE",
       "DIRECT_OPTION_OVER_BUDGET",
+      "FLEXIBLE_ECONOMY_POLICY",
       "LOWEST_FARE"
     ],
     "approvers": [
@@ -196,5 +199,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Every flexible nonstop is over the 900-pound fare budget (BA 915, SAA 930), so lines 248-250 give the most cost-effective route: the cheapest flexible economy fare, Emirates via Dubai at 720 pounds. All flights land on the 27th and the workshop is on the 28th."
+  "design_notes": "Every flexible nonstop is over the 900-pound fare budget (BA 915, SAA 930), so lines 248-250 give the most cost-effective route: the cheapest flexible economy fare, Emirates via Dubai at 720 pounds. All flights land on the 27th and the workshop is on the 28th. The British Airways saver nonstop (610) is within budget but is not flexible economy (line 253; the trip record's fare note), so it is not accepted."
 }

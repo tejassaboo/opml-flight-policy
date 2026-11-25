@@ -41,7 +41,9 @@
         "cabin": "NONE"
       }
     ],
-    "notes": []
+    "notes": [
+      "In OPM's booking tool, an economy fare marked refundable (changed or refunded without a fee) is the fare OPM's travel service providers sell as flexible economy; an economy fare that is not refundable is a restricted saver fare."
+    ]
   },
   "world": {
     "searches": [
@@ -136,14 +138,17 @@
   "expected": {
     "decision": "BOOK",
     "offer_slots": [
-      "british-flex"
+      "british-flex",
+      "dubai-flex"
     ],
     "cabins": [
       "ECONOMY"
     ],
     "reason_codes": [
       "ALTERNATE_ROUTE_WITHIN_MARGIN",
-      "DIRECT_OPTION_WITHIN_BUDGET"
+      "DIRECT_OPTION_WITHIN_BUDGET",
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
     ],
     "approvers": [
       "NONE",
@@ -186,5 +191,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Lines 249-250: the most direct option within budget may be selected over a cheaper less direct route. The British Airways flexible nonstop is 885 pounds, within the 900-pound fare budget, so it is booked as asked; the Emirates connection (720) is cheaper but need not be taken. The SAA flexible nonstop (930) is over budget."
+  "design_notes": "Lines 249-250: the most direct option within budget may be selected over a cheaper less direct route. The British Airways flexible nonstop is 885 pounds, within the 900-pound fare budget, so it is booked as asked; the Emirates connection (720) is cheaper but need not be taken; it is accepted too, since \"may be selected\" permits the nonstop without requiring it and line 248 makes the cheapest flexible fare compliant. The SAA flexible nonstop (930) is over budget. The British Airways saver nonstop (610) is not flexible economy (line 253; the trip record's fare note), so it is not accepted."
 }

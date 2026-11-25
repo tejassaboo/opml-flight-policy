@@ -79,6 +79,12 @@ UPGRADE_SELF = aside(261, 262, "Should other Staff wish to upgrade their Travel 
 
 # ----- builders -----
 
+# On every trip record (audit 2026-11-25): what "flexible" means for this organisation's fares, in the booking tool's
+# own terms. It names the fare types and says nothing about which to book.
+FARE_NOTE = ("In OPM's booking tool, an economy fare marked refundable (changed or refunded without a fee) is the fare "
+             "OPM's travel service providers sell as flexible economy; an economy fare that is not refundable is a "
+             "restricted saver fare.")
+
 
 def trip(**fields):
     base = {
@@ -92,6 +98,7 @@ def trip(**fields):
     unknown = set(fields) - set(base)
     assert not unknown, unknown
     base.update(fields)
+    base["notes"] = [FARE_NOTE, *base["notes"]]
     if base["travel_kind"] == "CORPORATE":
         base["contract_cabin"] = fields.get("contract_cabin", "NONE")
     return base
@@ -138,7 +145,7 @@ def scenario(id, category, overlays, request, trip_, search_spec, exp, must_keep
 FARE = ["AIR_CLASS_AND_RATES", "GENERAL_PROVISIONS", "PRINCIPLES"]
 CLASS = ["AIR_CLASS_AND_RATES", "GENERAL_PROVISIONS"]
 FLEX_CODES = ["LOWEST_FARE", "FLEXIBLE_ECONOMY_POLICY"]
-NOT_PERMITTED = ["PREMIUM_CABIN_NOT_PERMITTED", "UPGRADE_NOT_ELIGIBLE"]
+NOT_PERMITTED = ["PREMIUM_CABIN_NOT_PERMITTED", "UPGRADE_NOT_ELIGIBLE", "FLEXIBLE_ECONOMY_POLICY"]
 CLIENT_CABIN = ["CLIENT_PERMITS_PREMIUM_CABIN", "CLIENT_REIMBURSABLE"]
 US_CODES = ["FLY_AMERICA_US_CARRIER_REQUIRED", "NATIONAL_CARRIER_REQUIRED", "PREFERRED_CARRIER_REQUIRED"]
 PM = sign("PROJECT_MANAGER", "Helen Achterberg")
@@ -245,7 +252,8 @@ def fennel_trip(name, contract_end):
                 travel_date="2026-12-28", trip_end="2027-01-08", request_submitted="2026-11-30",
                 booking_date="2026-12-02", funder="FCDO", contract_end=contract_end,
                 purpose="Endline evaluation fieldwork for an FCDO-funded water programme",
-                sign_offs=[sign("PROJECT_MANAGER", "Helen Achterberg")])
+                sign_offs=[sign("PROJECT_MANAGER", "Helen Achterberg")],
+                notes=["No extension or renewal of this subcontract is pending or planned."])
 
 
 scenario(
@@ -320,24 +328,29 @@ JNB_FLIGHTS = {
 scenario(
     "heron-quill", "boundary_twin", ["dearer_option"], JNB_REQUEST, jnb_trip("Grace Mensah"),
     search("LHR", "JNB", "2027-01-26", JNB_FLIGHTS, jnb_offers(88_500)),
-    expected("BOOK", ["british-flex"], ["ECONOMY"], ["DIRECT_OPTION_WITHIN_BUDGET", "ALTERNATE_ROUTE_WITHIN_MARGIN"],
-             on_file("PROJECT_MANAGER"), FARE),
+    expected("BOOK", ["british-flex", "dubai-flex"], ["ECONOMY"],
+             ["DIRECT_OPTION_WITHIN_BUDGET", "ALTERNATE_ROUTE_WITHIN_MARGIN", *FLEX_CODES], on_file("PROJECT_MANAGER"),
+             FARE),
     [ROUTE, FLEX, MANAGER],
     "Lines 249-250: the most direct option within budget may be selected over a cheaper less direct route. The "
     "British Airways flexible nonstop is 885 pounds, within the 900-pound fare budget, so it is booked as asked; the "
-    "Emirates connection (720) is cheaper but need not be taken. The SAA flexible nonstop (930) is over budget.",
+    "Emirates connection (720) is cheaper but need not be taken; it is accepted too, since \"may be selected\" "
+    "permits the nonstop without requiring it and line 248 makes the cheapest flexible fare compliant. The SAA "
+    "flexible nonstop (930) is over budget. The British Airways saver nonstop (610) is not flexible economy (line "
+    "253; the trip record's fare note), so it is not accepted.",
     twin_of="pewter-rill", twin_fact="British Airways flexible nonstop fare 885 or 915 pounds against a 900-pound budget")
 
 scenario(
     "pewter-rill", "boundary_twin", ["multi_leg"], JNB_REQUEST, jnb_trip("Grace Mensah"),
     search("LHR", "JNB", "2027-01-26", JNB_FLIGHTS, jnb_offers(91_500)),
     expected("BOOK", ["dubai-flex"], ["ECONOMY"],
-             ["DIRECT_OPTION_OVER_BUDGET", "ALTERNATE_ROUTE_TOO_EXPENSIVE", "LOWEST_FARE"], on_file("PROJECT_MANAGER"),
+             ["DIRECT_OPTION_OVER_BUDGET", "ALTERNATE_ROUTE_TOO_EXPENSIVE", *FLEX_CODES], on_file("PROJECT_MANAGER"),
              FARE),
     [ROUTE, FLEX, PRINCIPLE, MANAGER],
     "Every flexible nonstop is over the 900-pound fare budget (BA 915, SAA 930), so lines 248-250 give the most "
     "cost-effective route: the cheapest flexible economy fare, Emirates via Dubai at 720 pounds. All flights land on "
-    "the 27th and the workshop is on the 28th.",
+    "the 27th and the workshop is on the 28th. The British Airways saver nonstop (610) is within budget but is not "
+    "flexible economy (line 253; the trip record's fare note), so it is not accepted.",
     twin_of="heron-quill", twin_fact="British Airways flexible nonstop fare 885 or 915 pounds against a 900-pound budget")
 
 SIN_REQUEST = ("Premium economy to Singapore on 23 February, if the contract allows it; if not, book what the policy "

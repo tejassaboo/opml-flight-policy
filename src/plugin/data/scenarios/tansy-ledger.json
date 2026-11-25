@@ -39,7 +39,9 @@
         "cabin": "NONE"
       }
     ],
-    "notes": []
+    "notes": [
+      "In OPM's booking tool, an economy fare marked refundable (changed or refunded without a fee) is the fare OPM's travel service providers sell as flexible economy; an economy fare that is not refundable is a restricted saver fare."
+    ]
   },
   "world": {
     "searches": [
@@ -114,6 +116,7 @@
       "ECONOMY"
     ],
     "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
       "PREMIUM_CABIN_NOT_PERMITTED",
       "UPGRADE_NOT_ELIGIBLE"
     ],

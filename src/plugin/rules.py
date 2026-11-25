@@ -14,7 +14,8 @@ Management Team (lines 253-262), never on hours in the air. DURATION_RULES is em
 The fare. Line 253: "OPM's policy is to book flexible economy class flights." In this world the flexible fare
 is the one whose ``refundable`` flag is true (refunded or changed without a fee); line 248 adds "the most
 cost-effective, direct route available", so the economy answer is the cheapest flexible economy fare that can
-be bought. A premium-cabin answer is the cheapest seat of that cabin, and every such scenario makes that seat a
+be bought. Every trip record says so in a neutral note (tests/build_scenarios.py FARE_NOTE): an economy fare
+marked refundable is the one OPM's providers sell as flexible economy. A premium-cabin answer is the cheapest seat of that cabin, and every such scenario makes that seat a
 flexible one, so the answer does not depend on whether "flexible" reaches beyond economy.
 """
 
@@ -281,14 +282,19 @@ def economy(trip, flexible):
         raise ValueError("a nonstop wish needs a flexible nonstop, a fare budget and a cheaper connection")
     fare = direct[0].fare_cents
     if fare <= trip.fare_budget_cents:
-        return (Decision.BOOK, direct, [ReasonCode.DIRECT_OPTION_WITHIN_BUDGET, ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN],
-                list(FARE),
+        # "may be selected": the nonstop the traveller asks for is permitted, not required, so the cheaper
+        # flexible connection of line 248 (the most cost-effective route) is accepted too, with its own reasons.
+        return (Decision.BOOK, direct + lowest,
+                [ReasonCode.DIRECT_OPTION_WITHIN_BUDGET, ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN,
+                 ReasonCode.LOWEST_FARE, ReasonCode.FLEXIBLE_ECONOMY_POLICY], list(FARE),
                 [(f"lines 249-250: the flexible nonstop at {fare} pence is within the {trip.fare_budget_cents} pence "
-                 "budget, so it may be selected over the cheaper connection, as the traveller asks")])
+                 "budget, so it may be selected over the cheaper connection, as the traveller asks; the cheapest "
+                 "flexible fare (line 248) is accepted too, since the nonstop is permitted, not required")])
     # The nonstop is declined on the handbook's own budget test, part of its cost-effective route rule: LOWEST_FARE
     # is accepted beside the specific codes (lead's decision, the same in every plugin).
+    # FLEXIBLE_ECONOMY_POLICY too: the only nonstop within budget is a saver fare, outside flexible economy.
     return (Decision.BOOK, lowest, [ReasonCode.DIRECT_OPTION_OVER_BUDGET, ReasonCode.ALTERNATE_ROUTE_TOO_EXPENSIVE,
-                                    ReasonCode.LOWEST_FARE], list(FARE),
+                                    ReasonCode.LOWEST_FARE, ReasonCode.FLEXIBLE_ECONOMY_POLICY], list(FARE),
             [(f"lines 248-250: the flexible nonstop at {fare} pence is over the {trip.fare_budget_cents} pence budget, "
              "so the most cost-effective route: the cheapest flexible economy fare, a connection")])
 
@@ -325,8 +331,8 @@ def project_cabin(trip, pool, flexible):
     decision, chosen, _, clauses, notes = economy(trip, flexible)
     notes.append(f"lines 253-255: neither the client contract nor a written client/donor approval allows "
                  f"{wanted.value}, so quotes stay in flexible economy")
-    return (decision, chosen, [ReasonCode.PREMIUM_CABIN_NOT_PERMITTED, ReasonCode.UPGRADE_NOT_ELIGIBLE], [], clauses,
-            notes, "")
+    return (decision, chosen, [ReasonCode.PREMIUM_CABIN_NOT_PERMITTED, ReasonCode.UPGRADE_NOT_ELIGIBLE,
+                               ReasonCode.FLEXIBLE_ECONOMY_POLICY], [], clauses, notes, "")
 
 
 def corporate_cabin(trip, pool, flexible):
@@ -357,5 +363,5 @@ def corporate_cabin(trip, pool, flexible):
                  "member of staff fly above economy at OPM's cost is open: hold either fare")], SMT_PHRASE)
     notes.append(f"lines 255-262: corporate {wanted.value} needs the CFO's approval and is for the Board and the Senior "
                  "Management Team; no approval is on file, so flexible economy")
-    return (decision, chosen, [ReasonCode.PREMIUM_CABIN_NOT_PERMITTED, ReasonCode.UPGRADE_NOT_ELIGIBLE], [], clauses,
-            notes, "")
+    return (decision, chosen, [ReasonCode.PREMIUM_CABIN_NOT_PERMITTED, ReasonCode.UPGRADE_NOT_ELIGIBLE,
+                               ReasonCode.FLEXIBLE_ECONOMY_POLICY], [], clauses, notes, "")
