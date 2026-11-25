@@ -1,5 +1,7 @@
 # OPM Travel Policy Flight Booking
 
+**Source of the handbook:** https://www.opml.co.uk/sites/default/files/2024-03/travel-policy-v4-0-march-2024.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with Oxford Policy Management.** The handbook is the *OPM Travel Policy* (Oxford Policy
 Management Limited, Project Management Office, March 2024, version 4.0), a published company policy bundled
 verbatim for research. Its public source URL was not recorded (`pilot_work/originals/MANIFEST.md`: UNVERIFIED; the
