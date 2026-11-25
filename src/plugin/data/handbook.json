@@ -8,7 +8,7 @@
   "raw_pdf_sha256": "a7baa69793fb24f12dcd01c43d4f19f7ad5abf3aa21382442e9b0fcab2238c5a",
   "words": 3403,
   "lines": 413,
-  "source": "not recorded locally (UNVERIFIED); the raw PDF is the pinned copy",
+  "source": "https://www.opml.co.uk/sites/default/files/2024-03/travel-policy-v4-0-march-2024.pdf; byte-identical to the pinned raw PDF (sha256 checked 2026-11-25)",
   "frozen_on": "2026-11-24",
   "scenario_count": 24,
   "currency": "GBP",
