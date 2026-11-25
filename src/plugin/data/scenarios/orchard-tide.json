@@ -1,0 +1,164 @@
+{
+  "id": "orchard-tide",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Economy to Delhi on 2 March is fine for me; I'd rather keep the travel budget for the field visits. The inception meeting is the day after I land.",
+  "trip": {
+    "traveller_name": "Rohan Mehta",
+    "traveller_title": "Principal Consultant, Education",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "DEL",
+    "travel_date": "2027-03-02",
+    "trip_end": "2027-03-20",
+    "request_submitted": "2027-01-25",
+    "booking_date": "2027-01-27",
+    "travel_kind": "PROJECT",
+    "funder": "World Bank",
+    "contract_cabin": "BUSINESS",
+    "contract_end": "",
+    "purpose": "Inception mission for a World Bank-funded school finance programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "DEL",
+        "date": "2027-03-02",
+        "return_date": "",
+        "background": 2,
+        "flights": {
+          "india": {
+            "carrier": "AI",
+            "depart": "11:40"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "13:05"
+          }
+        },
+        "offers": [
+          {
+            "slot": "india-saver",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 38400
+          },
+          {
+            "slot": "india-flex",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 52900,
+            "refundable": true
+          },
+          {
+            "slot": "india-business",
+            "flight": "india",
+            "cabin": "BUSINESS",
+            "fare_cents": 218000,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 57800,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 236000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "india-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        248,
+        250
+      ],
+      "sha256": "53c0ecdb94081e1d19fb6eea16cb53c0edaa6b55e297acbb02efb8ad9ff5bd74",
+      "quote": "All flight bookings made will take account of the most cost-effective, direct route available. Where the most direct option available is within budget parameters, this option may be selected over a cheaper less direct route.",
+      "why": "the cost-effective direct route; a direct option within budget"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The client contract permits business (lines 253-255), but that is a permission and the traveller asks for economy, so the cheapest flexible economy fare: Air India at 529 pounds."
+}

@@ -1,0 +1,170 @@
+{
+  "id": "linnet-gable",
+  "category": "hidden_clause",
+  "overlays": [
+    "dearer_option",
+    "synonym"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The funder has okayed premium economy for this trip in writing, and their email is on file. Please book premium economy to Mumbai on 12 January; the state workshop is on the 14th.",
+  "trip": {
+    "traveller_name": "Kavita Rao",
+    "traveller_title": "Senior Consultant, Child Protection",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "BOM",
+    "travel_date": "2027-01-12",
+    "trip_end": "2027-01-22",
+    "request_submitted": "2026-12-07",
+    "booking_date": "2026-12-09",
+    "travel_kind": "PROJECT",
+    "funder": "UNICEF",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "State workshop for a UNICEF-funded child protection programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      },
+      {
+        "role": "CLIENT_OR_DONOR",
+        "name": "UNICEF programme officer, by email",
+        "subject": "CABIN",
+        "cabin": "PREMIUM_ECONOMY"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "BOM",
+        "date": "2027-01-12",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "india": {
+            "carrier": "AI",
+            "depart": "13:15"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "20:55"
+          }
+        },
+        "offers": [
+          {
+            "slot": "india-saver",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 36500
+          },
+          {
+            "slot": "india-flex",
+            "flight": "india",
+            "cabin": "ECONOMY",
+            "fare_cents": 49800,
+            "refundable": true
+          },
+          {
+            "slot": "india-premium",
+            "flight": "india",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 96000,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 39000
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 52400,
+            "refundable": true
+          },
+          {
+            "slot": "british-premium",
+            "flight": "british",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 104000,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 245000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "india-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "CLIENT_PERMITS_PREMIUM_CABIN",
+      "CLIENT_REIMBURSABLE",
+      "PREMIUM_CABIN_APPROVED"
+    ],
+    "approvers": [
+      "CLIENT_OR_DONOR",
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The contract allows only economy, but lines 253-255 also lift the economy rule 'where specific written approval of the client/donor has been received': the donor's written approval of premium economy is on file (the request says 'okayed in writing'). The cheapest premium economy seat is Air India at 960 pounds."
+}

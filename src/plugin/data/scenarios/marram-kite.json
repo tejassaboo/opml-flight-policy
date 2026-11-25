@@ -1,0 +1,140 @@
+{
+  "id": "marram-kite",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Could you put my flight to Barcelona on 1 April on the OPM account? It's a long weekend away with my partner. I'll pay it back from my salary.",
+  "trip": {
+    "traveller_name": "Priya Nair",
+    "traveller_title": "Consultant, Health Systems",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "BCN",
+    "travel_date": "2027-04-01",
+    "trip_end": "2027-04-05",
+    "request_submitted": "2027-02-22",
+    "booking_date": "2027-02-23",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "A long weekend in Barcelona with her partner",
+    "purpose_kind": "PERSONAL",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "BCN",
+        "date": "2027-04-01",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "07:30"
+          },
+          "madrid": {
+            "carrier": "IB",
+            "via": [
+              "MAD"
+            ],
+            "depart": "09:10",
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 7900
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 14200,
+            "refundable": true
+          },
+          {
+            "slot": "madrid-saver",
+            "flight": "madrid",
+            "cabin": "ECONOMY",
+            "fare_cents": 11300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "BOOKING_TRAVEL",
+      "FINANCIAL_RESPONSIBILITY",
+      "PERSONAL_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        114,
+        115
+      ],
+      "sha256": "12bfa7448b732219e0d55b2402dc13faea1de5d6d268996118168fbac25b1a4e",
+      "quote": "The use of the OPM business account and/or Project funds to book personal travel is strictly prohibited.",
+      "why": "no personal travel on the business account"
+    },
+    {
+      "lines": [
+        142,
+        144
+      ],
+      "sha256": "d09a0a8fb1b3d81f11ef7586a3484a1c216b6689a81e8ab346d0ed8f27214d73",
+      "quote": "No costs associated with personal travel, including but not limited to additional flight costs, accommodation, meals, or transportation, will be reimbursed by our company or the client. All expenses related to personal travel are the sole responsibility of the individual.",
+      "why": "no cost of personal travel is reimbursed"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        261,
+        262
+      ],
+      "quote": "Should other Staff wish to upgrade their Travel from economy, they may do so, provided that the Staff member reimburses OPM for any additional costs.",
+      "why": "about upgrades, not personal trips"
+    }
+  ],
+  "design_notes": "Lines 114-115: using the OPM business account to book personal travel is strictly prohibited, repaid or not (the repayment of lines 261-262 is for upgrades on business travel). No ticket."
+}

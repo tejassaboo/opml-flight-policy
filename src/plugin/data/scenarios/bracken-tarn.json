@@ -1,0 +1,166 @@
+{
+  "id": "bracken-tarn",
+  "category": "refusal",
+  "overlays": [
+    "multi_leg",
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "fennel-cairn",
+  "twin_fact": "contract ends 31 January 2027 or 31 December 2026",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I fly out to Nairobi from Edinburgh on 28 December for the endline evaluation fieldwork, and I'm out there until 8 January. Economy, please.",
+  "trip": {
+    "traveller_name": "Iain Ross",
+    "traveller_title": "Independent evaluation consultant",
+    "passenger": "SUBCONTRACTOR",
+    "seniority": "STAFF",
+    "home_airport": "EDI",
+    "workplace_airport": "EDI",
+    "origin": "EDI",
+    "destination": "NBO",
+    "travel_date": "2026-12-28",
+    "trip_end": "2027-01-08",
+    "request_submitted": "2026-11-30",
+    "booking_date": "2026-12-02",
+    "travel_kind": "PROJECT",
+    "funder": "FCDO",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "2026-12-31",
+    "purpose": "Endline evaluation fieldwork for an FCDO-funded water programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "EDI",
+        "destination": "NBO",
+        "date": "2026-12-28",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "london": {
+            "carrier": "BA",
+            "via": [
+              "LHR"
+            ],
+            "depart": "06:40",
+            "layovers": [
+              125
+            ]
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "07:10",
+            "layovers": [
+              150
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "08:30",
+            "layovers": [
+              175
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "london-saver",
+            "flight": "london",
+            "cabin": "ECONOMY",
+            "fare_cents": 52000
+          },
+          {
+            "slot": "london-flex",
+            "flight": "london",
+            "cabin": "ECONOMY",
+            "fare_cents": 69800,
+            "refundable": true
+          },
+          {
+            "slot": "amsterdam-saver",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 49500
+          },
+          {
+            "slot": "amsterdam-flex",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 66300,
+            "refundable": true
+          },
+          {
+            "slot": "dubai-saver",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 47900
+          },
+          {
+            "slot": "dubai-flex",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 71500,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "SUBCONTRACT_NOT_COVERING_TRIP"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "PROJECT_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        127,
+        127
+      ],
+      "sha256": "54e8af2a2ff938599cb58e6004ec9abf921917a06029397a67ecd01e7492f611",
+      "quote": "Subcontractors must have a valid contract covering the duration of their trip.",
+      "why": "a subcontractor's contract must cover the whole trip"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 127: subcontractors must have a valid contract covering the duration of their trip. The contract ends 31 December and the trip runs to 8 January: no ticket. The Project Manager's approval on file does not change the contract rule (4(b): accepted beside NONE)."
+}

@@ -1,0 +1,179 @@
+{
+  "id": "sorrel-beacon",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class to Johannesburg on 13 April, please; the CFO has signed it off. I'm meeting the foundation's board on the 15th.",
+  "trip": {
+    "traveller_name": "Catherine Hale",
+    "traveller_title": "Director of Business Development",
+    "passenger": "STAFF",
+    "seniority": "SENIOR_MANAGEMENT_TEAM",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "JNB",
+    "travel_date": "2027-04-13",
+    "trip_end": "2027-04-18",
+    "request_submitted": "2027-03-08",
+    "booking_date": "2027-03-10",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "Partnership meeting with a foundation's board",
+    "purpose_kind": "BUSINESS_DEVELOPMENT",
+    "requested_cabin": "BUSINESS",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "LINE_MANAGER",
+        "name": "Sarah Clarke",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      },
+      {
+        "role": "CHIEF_FINANCIAL_OFFICER",
+        "name": "Martin Okonjo",
+        "subject": "CABIN",
+        "cabin": "BUSINESS"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JNB",
+        "date": "2027-04-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:05"
+          },
+          "african": {
+            "carrier": "SA",
+            "depart": "21:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 59000
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 84000,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 342000,
+            "refundable": true
+          },
+          {
+            "slot": "african-saver",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 62000
+          },
+          {
+            "slot": "african-flex",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 86000,
+            "refundable": true
+          },
+          {
+            "slot": "african-business",
+            "flight": "african",
+            "cabin": "BUSINESS",
+            "fare_cents": 318000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "african-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "PREMIUM_CABIN_APPROVED",
+      "SENIOR_ROLE_ENTITLEMENT"
+    ],
+    "approvers": [
+      "CHIEF_FINANCIAL_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        255,
+        257
+      ],
+      "sha256": "dd8003a93a53602ed92ce29d0ceeccd4f83d369a27351d88e710783ffe1b2d1c",
+      "quote": "For corporate travel, internal approval will be required from the Chief Financial Officer prior to any bookings in Business or Premium Economy being finalised.",
+      "why": "corporate premium cabins need the CFO"
+    },
+    {
+      "lines": [
+        258,
+        262
+      ],
+      "sha256": "393c238ececf922c821b042a6902ab8312bb111f9c2e7ecd9fa8dcdd33b7cb5e",
+      "quote": "For corporate Travel, the OPM Board and members of the Senior Management Team may be permitted to Travel in a class other than economy, following approval from the COO, CFO, and/or the CEO. Where feasible, the use of Air Miles should be explored for any corporate-related Travel. Should other Staff wish to upgrade their Travel from economy, they may do so, provided that the Staff member reimburses OPM for any additional costs.",
+      "why": "Board and SMT may travel above economy with approval; other staff upgrade at their own cost"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        260,
+        261
+      ],
+      "quote": "Where feasible, the use of Air Miles should be explored for any corporate-related Travel.",
+      "why": "a soft suggestion that does not choose the ticket"
+    }
+  ],
+  "design_notes": "Corporate travel by a member of the Senior Management Team: lines 258-260 permit a class other than economy following approval from the COO, CFO and/or CEO, and lines 255-257 need the CFO's approval before a business booking: both met. The cheapest business seat is SAA at 3,180 pounds."
+}

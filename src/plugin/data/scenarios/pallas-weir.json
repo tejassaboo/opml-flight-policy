@@ -1,0 +1,161 @@
+{
+  "id": "pallas-weir",
+  "category": "distractor",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book economy to Paris on 4 March for our report launch that afternoon.",
+  "trip": {
+    "traveller_name": "Sophie Laurent",
+    "traveller_title": "Communications Manager",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "CDG",
+    "travel_date": "2027-03-04",
+    "trip_end": "2027-03-05",
+    "request_submitted": "2027-02-08",
+    "booking_date": "2027-02-09",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "Launch event for OPM's evaluation report in Paris",
+    "purpose_kind": "MARKETING",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 24800,
+    "rail_arrival": "2027-03-04 11:47",
+    "sign_offs": [
+      {
+        "role": "LINE_MANAGER",
+        "name": "Sarah Clarke",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "CDG",
+        "date": "2027-03-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "france": {
+            "carrier": "AF",
+            "depart": "07:05"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "08:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 9800
+          },
+          {
+            "slot": "france-saver",
+            "flight": "france",
+            "cabin": "ECONOMY",
+            "fare_cents": 10900
+          },
+          {
+            "slot": "france-flex",
+            "flight": "france",
+            "cabin": "ECONOMY",
+            "fare_cents": 19800,
+            "refundable": true
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 21500,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "france-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE",
+      "RAIL_NOT_CHEAPER"
+    ],
+    "approvers": [
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES",
+      "TRAINS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        250,
+        252
+      ],
+      "sha256": "5c8207296fb401fc41853785314d0ccfe4935ca91e2d3199c45a7d9579661706",
+      "quote": "For Travel between the UK and the EU, Eurostar may present a more optimal route/fare/price, and this should be examined in addition to flights.",
+      "why": "Eurostar is examined beside flights"
+    },
+    {
+      "lines": [
+        297,
+        299
+      ],
+      "sha256": "8b25887176df4d047d4173e8a1dd07c157185dbb89805c9cb799ff9084e257bc",
+      "quote": "For Travel in Europe / between the UK and Europe, Travellers should consider the use of Eurostar. Eurostar should be used where costs are cheaper unless the timings of Travel via Eurostar are prohibitive.",
+      "why": "Eurostar where it is cheaper, unless its timings are prohibitive"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "UK to France: Eurostar is examined beside flights (lines 250-252) and used where it is cheaper (297-299). The quoted train is 248 pounds, dearer than every flight, so fly: the cheapest flexible economy fare, Air France at 198 pounds."
+}

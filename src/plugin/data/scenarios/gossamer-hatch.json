@@ -1,0 +1,155 @@
+{
+  "id": "gossamer-hatch",
+  "category": "flag",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "approval_required",
+    "outside_air_section"
+  ],
+  "twin_of": "cobble-larch",
+  "twin_fact": "request submitted on 27 or 28 November",
+  "flag_twins": [
+    "cobble-larch",
+    "wicket-moraine"
+  ],
+  "ambiguity_note": "none: the TSSM's sign-off for urgent travel is required and missing; the text is clear",
+  "request": "Short notice, I know: the ministry brought the review mission in Cairo forward to 3 December. Please book economy out on 2 December.",
+  "trip": {
+    "traveller_name": "Youssef Haddad",
+    "traveller_title": "Consultant, Social Policy",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "CAI",
+    "travel_date": "2026-12-02",
+    "trip_end": "2026-12-09",
+    "request_submitted": "2026-11-28",
+    "booking_date": "2026-11-30",
+    "travel_kind": "PROJECT",
+    "funder": "FCDO",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Review mission for an FCDO-funded social protection programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": [
+      "The Project Manager approved the trip and its costs on 29 November."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "CAI",
+        "date": "2026-12-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "egypt": {
+            "carrier": "MS",
+            "depart": "09:40"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "12:25"
+          }
+        },
+        "offers": [
+          {
+            "slot": "egypt-saver",
+            "flight": "egypt",
+            "cabin": "ECONOMY",
+            "fare_cents": 18900
+          },
+          {
+            "slot": "egypt-flex",
+            "flight": "egypt",
+            "cabin": "ECONOMY",
+            "fare_cents": 29600,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 21300
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "egypt-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ADVANCE_PURCHASE_TOO_LATE",
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "TSSM"
+    ],
+    "clauses": [
+      "BOOKING_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        117,
+        117
+      ],
+      "sha256": "1f065b6bba741c60f153ce3084ccd5b34f17e103cb5a00b652578de0ab5783fc",
+      "quote": "Travel requests must be submitted at least five days prior to Travel",
+      "why": "the request lead time"
+    },
+    {
+      "lines": [
+        123,
+        123
+      ],
+      "sha256": "afbb0e2c3a8d603eb133cd631e402f411ad52bb9036e313198b64bbe5c039332",
+      "quote": "In cases of urgent travel, please contact the TSSM.",
+      "why": "urgent travel goes to the TSSM"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The request went in on 28 November for travel on 2 December: four days, under the five of line 117. The traveller calls it short notice; line 123 says urgent travel goes to the TSSM, and no TSSM sign-off is on file. Hold the flexible EgyptAir fare (296 pounds) for the TSSM: approval required, not 'no compliant offer'."
+}

@@ -1,0 +1,181 @@
+{
+  "id": "vesper-lattice",
+  "category": "flag",
+  "overlays": [
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "sorrel-beacon",
+    "tansy-ledger"
+  ],
+  "ambiguity_note": {
+    "phrase": "the OPM Board and members of the Senior Management Team may be permitted to Travel in a class other than economy",
+    "readings": [
+      "the CFO's internal approval (lines 255-257) is enough for any corporate traveller, so business is booked",
+      "a class other than economy at OPM's cost is for the Board and the Senior Management Team; other staff fly economy unless they repay the upgrade, so flexible economy is booked"
+    ]
+  },
+  "request": "The CFO has signed off business class for me for this trip, so please book business to Johannesburg on 13 April. I'm presenting to the foundation's board on the 15th.",
+  "trip": {
+    "traveller_name": "Michael Adeyemi",
+    "traveller_title": "Principal Consultant, Partnerships",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "JNB",
+    "travel_date": "2027-04-13",
+    "trip_end": "2027-04-18",
+    "request_submitted": "2027-03-08",
+    "booking_date": "2027-03-10",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "Presentation to a foundation's board",
+    "purpose_kind": "BUSINESS_DEVELOPMENT",
+    "requested_cabin": "BUSINESS",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "LINE_MANAGER",
+        "name": "Sarah Clarke",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      },
+      {
+        "role": "CHIEF_FINANCIAL_OFFICER",
+        "name": "Martin Okonjo",
+        "subject": "CABIN",
+        "cabin": "BUSINESS"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JNB",
+        "date": "2027-04-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:05"
+          },
+          "african": {
+            "carrier": "SA",
+            "depart": "21:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 59000
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 84000,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 342000,
+            "refundable": true
+          },
+          {
+            "slot": "african-saver",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 62000
+          },
+          {
+            "slot": "african-flex",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 86000,
+            "refundable": true
+          },
+          {
+            "slot": "african-business",
+            "flight": "african",
+            "cabin": "BUSINESS",
+            "fare_cents": 318000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "african-business",
+      "british-flex"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "CHIEF_FINANCIAL_OFFICER",
+      "CHIEF_OPERATING_OFFICER",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS"
+    ],
+    "unclear_phrase": "the OPM Board and members of the Senior Management Team may be permitted to Travel in a class other than economy"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        255,
+        257
+      ],
+      "sha256": "dd8003a93a53602ed92ce29d0ceeccd4f83d369a27351d88e710783ffe1b2d1c",
+      "quote": "For corporate travel, internal approval will be required from the Chief Financial Officer prior to any bookings in Business or Premium Economy being finalised.",
+      "why": "corporate premium cabins need the CFO"
+    },
+    {
+      "lines": [
+        258,
+        262
+      ],
+      "sha256": "393c238ececf922c821b042a6902ab8312bb111f9c2e7ecd9fa8dcdd33b7cb5e",
+      "quote": "For corporate Travel, the OPM Board and members of the Senior Management Team may be permitted to Travel in a class other than economy, following approval from the COO, CFO, and/or the CEO. Where feasible, the use of Air Miles should be explored for any corporate-related Travel. Should other Staff wish to upgrade their Travel from economy, they may do so, provided that the Staff member reimburses OPM for any additional costs.",
+      "why": "Board and SMT may travel above economy with approval; other staff upgrade at their own cost"
+    },
+    {
+      "lines": [
+        161,
+        161
+      ],
+      "sha256": "1f0084153f8dd35fdfc6220a8f29823afe1fbb94708b0ec4110acd5e5a8ebfd8",
+      "quote": "Overall accountability for OPM's Travel Policy rests with the Chief Operating Officer.",
+      "why": "the COO is accountable for the policy"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 255-257 require the CFO's approval before a corporate business booking, and it is on file. But lines 258-262 say the Board and SMT 'may be permitted' a class other than economy with COO/CFO/CEO approval, and that other staff may upgrade by repaying the extra cost. This traveller is not on the Board or SMT. Read one way, the CFO's approval lets any corporate traveller fly business (book SAA business, 3,180); read the other, business at OPM's cost is for the Board and SMT only (book flexible economy, BA 840). Hold either; the COO is accountable for the policy (line 161)."
+}

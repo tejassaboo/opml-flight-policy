@@ -1,0 +1,157 @@
+{
+  "id": "mistral-quay",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me economy to Dubai on 9 February. We're running a stand at the education donors' forum and setup is the day after I arrive.",
+  "trip": {
+    "traveller_name": "Tom Hargreaves",
+    "traveller_title": "Business Development Manager",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "DXB",
+    "travel_date": "2027-02-09",
+    "trip_end": "2027-02-13",
+    "request_submitted": "2027-01-11",
+    "booking_date": "2027-01-12",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "Marketing stand at an education donors' forum",
+    "purpose_kind": "MARKETING",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "LINE_MANAGER",
+        "name": "Sarah Clarke",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "DXB",
+        "date": "2027-02-09",
+        "return_date": "",
+        "background": 2,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "08:15"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "09:50"
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-saver",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800
+          },
+          {
+            "slot": "emirates-flex",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 44600,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 34900
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 47200,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "emirates-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        248,
+        250
+      ],
+      "sha256": "53c0ecdb94081e1d19fb6eea16cb53c0edaa6b55e297acbb02efb8ad9ff5bd74",
+      "quote": "All flight bookings made will take account of the most cost-effective, direct route available. Where the most direct option available is within budget parameters, this option may be selected over a cheaper less direct route.",
+      "why": "the cost-effective direct route; a direct option within budget"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        260,
+        261
+      ],
+      "quote": "Where feasible, the use of Air Miles should be explored for any corporate-related Travel.",
+      "why": "a soft suggestion that does not choose the ticket"
+    }
+  ],
+  "design_notes": "Corporate marketing trip: flexible economy (line 253), the cheapest refundable economy fare is Emirates at 446 pounds. The line manager approved it (lines 122-123). No premium cabin is asked, so the CFO line does not arise."
+}

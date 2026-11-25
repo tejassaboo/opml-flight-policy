@@ -1,0 +1,173 @@
+{
+  "id": "saltmarsh-vigil",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Economy to New York on 16 February please; a daytime flight is fine in the back. The consultation starts the following morning.",
+  "trip": {
+    "traveller_name": "Hannah Lewis",
+    "traveller_title": "Consultant, Social Protection",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "JFK",
+    "travel_date": "2027-02-16",
+    "trip_end": "2027-02-20",
+    "request_submitted": "2027-01-18",
+    "booking_date": "2027-01-19",
+    "travel_kind": "PROJECT",
+    "funder": "UNICEF",
+    "contract_cabin": "PREMIUM_ECONOMY",
+    "contract_end": "",
+    "purpose": "Stakeholder consultation for a UNICEF-funded cash transfer review",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JFK",
+        "date": "2027-02-16",
+        "return_date": "",
+        "background": 2,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "09:15"
+          },
+          "american": {
+            "carrier": "AA",
+            "depart": "11:05"
+          },
+          "virgin": {
+            "carrier": "VS",
+            "depart": "13:30"
+          },
+          "delta": {
+            "carrier": "DL",
+            "depart": "08:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "delta-saver",
+            "flight": "delta",
+            "cabin": "ECONOMY",
+            "fare_cents": 41000
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 43500
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 54000,
+            "refundable": true,
+            "seats": false
+          },
+          {
+            "slot": "british-premium",
+            "flight": "british",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 112000,
+            "refundable": true
+          },
+          {
+            "slot": "american-flex",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 57500,
+            "refundable": true
+          },
+          {
+            "slot": "virgin-flex",
+            "flight": "virgin",
+            "cabin": "ECONOMY",
+            "fare_cents": 59000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "american-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        248,
+        250
+      ],
+      "sha256": "53c0ecdb94081e1d19fb6eea16cb53c0edaa6b55e297acbb02efb8ad9ff5bd74",
+      "quote": "All flight bookings made will take account of the most cost-effective, direct route available. Where the most direct option available is within budget parameters, this option may be selected over a cheaper less direct route.",
+      "why": "the cost-effective direct route; a direct option within budget"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Flexible economy (line 253). British Airways' 540-pound flexible fare is sold out, so American at 575 pounds. The contract would allow premium economy, but the traveller asks for economy."
+}

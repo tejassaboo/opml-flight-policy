@@ -1,0 +1,13 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "One flight request, a development consultancy's real travel policy: book it, refuse it, or hold it for sign-off"
+summary: "An agent handles one traveller's flight request under the OPM Travel Policy (Oxford Policy Management, March 2024), read verbatim. It reads the trip record, searches a simulated flight world (real airports and airlines, synthetic schedules and fares in pence) and submits a decision with the offer, cabin, reason, approver and policy section. A deterministic verifier rebuilds the offers and the policy's answer itself and checks every field. Twenty-four cases cover flexible economy against cheaper fixed fares, a nonstop within or over the fare budget, premium cabins from a client contract or a donor's written approval, the CFO and Senior Management Team rules on corporate travel, US carriers on USAID work, the five-day request rule to the day, subcontract dates, commutes, personal trips, Eurostar, and the policy's own unclear words."
+highlights:
+  - "The verbatim policy: no paraphrase, no rules restated in the task"
+  - "Exact boundaries: a request four or five days ahead, a nonstop fare under or over the budget, a contract ending before or after the trip"
+  - "Unclear clauses become holds for approval, each once, with clear twins on both sides"
+  - "Fully offline: a hash-seeded flight world with unguessable offer ids"
+steps:
+  - "Name a case, for example copper-lagoon, with the traveller's request"
+  - "The agent reads the trip record and searches flights on the trip's route and date"
+  - "It submits BOOK, REFUSE or FLAG_FOR_APPROVAL with the offer, cabin, reason, approver and section"
+  - "The verifier recomputes the policy's answer and checks every field"

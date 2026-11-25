@@ -1,0 +1,180 @@
+{
+  "id": "ember-cistern",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The World Bank contract covers business class for this assignment, so please book business to Bogota on 16 March. The ministry workshop is on the 18th.",
+  "trip": {
+    "traveller_name": "Lucia Fernandez",
+    "traveller_title": "Principal Consultant, Fiscal Policy",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "BOG",
+    "travel_date": "2027-03-16",
+    "trip_end": "2027-03-26",
+    "request_submitted": "2027-02-12",
+    "booking_date": "2027-02-15",
+    "travel_kind": "PROJECT",
+    "funder": "World Bank",
+    "contract_cabin": "BUSINESS",
+    "contract_end": "",
+    "purpose": "Tax policy workshop with the finance ministry for a World Bank-funded project",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "BUSINESS",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "BOG",
+        "date": "2027-03-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "13:05"
+          },
+          "avianca": {
+            "carrier": "AV",
+            "depart": "21:30"
+          },
+          "madrid": {
+            "carrier": "IB",
+            "via": [
+              "MAD"
+            ],
+            "depart": "07:15",
+            "layovers": [
+              140
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 47000
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 63500,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 268000,
+            "refundable": true
+          },
+          {
+            "slot": "avianca-saver",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 44500
+          },
+          {
+            "slot": "avianca-flex",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 60200,
+            "refundable": true
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 241000,
+            "refundable": true
+          },
+          {
+            "slot": "madrid-business",
+            "flight": "madrid",
+            "cabin": "BUSINESS",
+            "fare_cents": 255000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "avianca-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "CLIENT_PERMITS_PREMIUM_CABIN",
+      "CLIENT_REIMBURSABLE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        255,
+        257
+      ],
+      "quote": "For corporate travel, internal approval will be required from the Chief Financial Officer",
+      "why": "project travel needs no CFO approval"
+    }
+  ],
+  "design_notes": "Project travel whose client contract expressly permits business (lines 253-255); the CFO's approval (lines 255-257) is only for corporate travel, so none is needed. The cheapest business seat is Avianca at 2,410 pounds."
+}

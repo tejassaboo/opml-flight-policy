@@ -1,0 +1,125 @@
+{
+  "id": "drover-paddock",
+  "category": "hidden_clause",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I live in Edinburgh but my desk is at the London office. Please book my usual Monday morning flight down on 11 January, economy.",
+  "trip": {
+    "traveller_name": "Callum Fraser",
+    "traveller_title": "Consultant, Data and Evaluation",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "EDI",
+    "workplace_airport": "LHR",
+    "origin": "EDI",
+    "destination": "LHR",
+    "travel_date": "2027-01-11",
+    "trip_end": "2027-01-15",
+    "request_submitted": "2026-12-28",
+    "booking_date": "2026-12-29",
+    "travel_kind": "CORPORATE",
+    "funder": "",
+    "contract_cabin": "NONE",
+    "contract_end": "",
+    "purpose": "A week working at the London office, where he is based",
+    "purpose_kind": "OFFICE_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "EDI",
+        "destination": "LHR",
+        "date": "2027-01-11",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "BA",
+            "depart": "06:45"
+          },
+          "mid": {
+            "carrier": "BA",
+            "depart": "08:10"
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-saver",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 8900
+          },
+          {
+            "slot": "early-flex",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 15400,
+            "refundable": true
+          },
+          {
+            "slot": "mid-flex",
+            "flight": "mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 16900,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "COMMUTE_NOT_TRAVEL",
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "DEFINITIONS",
+      "SCOPE_OF_POLICY"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        65,
+        67
+      ],
+      "sha256": "97cf9b64cca1af4d5507c1171f5c6e20ab6c74a0d6afb3adad73ea21a2eb4219",
+      "quote": "Travel Travelling outside the normal place of work for bus iness purposes. It does not relate to a commute, or travel between a person's normal place of residence and normal place of work",
+      "why": "Travel is not a commute between home and the normal place of work"
+    },
+    {
+      "lines": [
+        89,
+        92
+      ],
+      "sha256": "e8d4cdadd320ecfa923c66fbba149251af16000f79fe6a3242f90049ca6acbfc",
+      "quote": "It does not relate to a commute, or travel between a person's normal place of residence and normal place of work.",
+      "why": "the scope repeats the definition"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The Definitions table and section 1.2: Travel is travelling outside the normal place of work for business, and does not relate to a commute between the normal place of residence and the normal place of work. Edinburgh home to the London office, where he is based, is that commute: OPM books no ticket."
+}

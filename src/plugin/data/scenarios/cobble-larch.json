@@ -1,0 +1,172 @@
+{
+  "id": "cobble-larch",
+  "category": "distractor",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "gossamer-hatch",
+  "twin_fact": "request submitted on 27 or 28 November",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Short notice, I know: the ministry brought the review mission in Cairo forward to 3 December. Please book economy out on 2 December.",
+  "trip": {
+    "traveller_name": "Youssef Haddad",
+    "traveller_title": "Consultant, Social Policy",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "CAI",
+    "travel_date": "2026-12-02",
+    "trip_end": "2026-12-09",
+    "request_submitted": "2026-11-27",
+    "booking_date": "2026-11-30",
+    "travel_kind": "PROJECT",
+    "funder": "FCDO",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Review mission for an FCDO-funded social protection programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": [
+      "The Project Manager approved the trip and its costs on 29 November."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "CAI",
+        "date": "2026-12-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "egypt": {
+            "carrier": "MS",
+            "depart": "09:40"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "12:25"
+          }
+        },
+        "offers": [
+          {
+            "slot": "egypt-saver",
+            "flight": "egypt",
+            "cabin": "ECONOMY",
+            "fare_cents": 18900
+          },
+          {
+            "slot": "egypt-flex",
+            "flight": "egypt",
+            "cabin": "ECONOMY",
+            "fare_cents": 29600,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 21300
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "egypt-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "BOOKING_TRAVEL",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        117,
+        117
+      ],
+      "sha256": "1f065b6bba741c60f153ce3084ccd5b34f17e103cb5a00b652578de0ab5783fc",
+      "quote": "Travel requests must be submitted at least five days prior to Travel",
+      "why": "the request lead time"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        120,
+        121
+      ],
+      "quote": "travel/logistical arrangements should be booked as far in advance as possible.",
+      "why": "a soft wish, not a booking condition"
+    },
+    {
+      "lines": [
+        123,
+        123
+      ],
+      "quote": "In cases of urgent travel, please contact the TSSM.",
+      "why": "the request is in time, so no TSSM sign-off is needed"
+    }
+  ],
+  "design_notes": "The request went in on 27 November for travel on 2 December: five days, and line 117 asks for at least five. Today is only two days before travel, but the rule is about when the request is submitted; 'as far in advance as possible' (lines 120-121) is a wish. Book the cheapest flexible economy fare, EgyptAir at 296 pounds."
+}

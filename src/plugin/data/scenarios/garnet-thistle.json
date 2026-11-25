@@ -1,0 +1,159 @@
+{
+  "id": "garnet-thistle",
+  "category": "boundary_twin",
+  "overlays": [],
+  "twin_of": "lumen-thicket",
+  "twin_fact": "client contract allows premium economy or only economy",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Premium economy to Singapore on 23 February, if the contract allows it; if not, book what the policy allows. I have to be at the regional inception workshop on the 25th.",
+  "trip": {
+    "traveller_name": "Wei Ling Tan",
+    "traveller_title": "Senior Consultant, Climate Finance",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "SIN",
+    "travel_date": "2027-02-23",
+    "trip_end": "2027-03-05",
+    "request_submitted": "2027-01-20",
+    "booking_date": "2027-01-21",
+    "travel_kind": "PROJECT",
+    "funder": "Asian Development Bank",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Regional inception workshop for an Asian Development Bank climate finance project",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "SIN",
+        "date": "2027-02-23",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "singapore": {
+            "carrier": "SQ",
+            "depart": "11:30"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "21:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "singapore-saver",
+            "flight": "singapore",
+            "cabin": "ECONOMY",
+            "fare_cents": 49000
+          },
+          {
+            "slot": "singapore-flex",
+            "flight": "singapore",
+            "cabin": "ECONOMY",
+            "fare_cents": 66000,
+            "refundable": true
+          },
+          {
+            "slot": "singapore-premium",
+            "flight": "singapore",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 128000,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 51500
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 69000,
+            "refundable": true
+          },
+          {
+            "slot": "british-premium",
+            "flight": "british",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 134000
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 310000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "singapore-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "PREMIUM_CABIN_NOT_PERMITTED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The contract allows only economy and no written client approval of a better cabin is on file, so quotes stay in flexible economy (lines 253-255): Singapore Airlines at 660 pounds. The request says to book what the policy allows."
+}

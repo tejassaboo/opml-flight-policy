@@ -1,0 +1,155 @@
+{
+  "id": "copper-lagoon",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I need to get to Nairobi on 19 January for the county health financing review, economy please. The review starts two days after I land.",
+  "trip": {
+    "traveller_name": "Amara Okafor",
+    "traveller_title": "Senior Consultant, Health Systems",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "NBO",
+    "travel_date": "2027-01-19",
+    "trip_end": "2027-01-30",
+    "request_submitted": "2026-12-14",
+    "booking_date": "2026-12-16",
+    "travel_kind": "PROJECT",
+    "funder": "FCDO",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "County health financing review for an FCDO-funded programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "NBO",
+        "date": "2027-01-19",
+        "return_date": "",
+        "background": 2,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "19:25"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "20:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-saver",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 46800
+          },
+          {
+            "slot": "kenya-flex",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 61200,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 50500
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 65500,
+            "refundable": true
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 294000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        248,
+        250
+      ],
+      "sha256": "53c0ecdb94081e1d19fb6eea16cb53c0edaa6b55e297acbb02efb8ad9ff5bd74",
+      "quote": "All flight bookings made will take account of the most cost-effective, direct route available. Where the most direct option available is within budget parameters, this option may be selected over a cheaper less direct route.",
+      "why": "the cost-effective direct route; a direct option within budget"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 253: the policy is to book flexible economy, so the cheapest refundable economy fare: Kenya Airways at 612 pounds (the two non-refundable fares are cheaper but are not flexible). The Project Manager approved the trip before booking (lines 122-123). Request 36 days ahead."
+}

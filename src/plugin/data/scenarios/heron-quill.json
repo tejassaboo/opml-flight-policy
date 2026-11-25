@@ -1,0 +1,190 @@
+{
+  "id": "heron-quill",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "pewter-rill",
+  "twin_fact": "British Airways flexible nonstop fare 885 or 915 pounds against a 900-pound budget",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Could you book the direct overnight flight to Johannesburg on 26 January if possible? The workshop with the Treasury starts on the 28th.",
+  "trip": {
+    "traveller_name": "Grace Mensah",
+    "traveller_title": "Senior Consultant, Public Financial Management",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "JNB",
+    "travel_date": "2027-01-26",
+    "trip_end": "2027-02-05",
+    "request_submitted": "2026-12-21",
+    "booking_date": "2026-12-22",
+    "travel_kind": "PROJECT",
+    "funder": "FCDO",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Budget reform workshop with the Treasury for an FCDO-funded programme",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": true,
+    "fare_budget_cents": 90000,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JNB",
+        "date": "2027-01-26",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:05"
+          },
+          "african": {
+            "carrier": "SA",
+            "depart": "21:15"
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "13:40",
+            "layovers": [
+              155
+            ]
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "09:10",
+            "layovers": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 61000
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 88500,
+            "refundable": true
+          },
+          {
+            "slot": "african-saver",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 64000
+          },
+          {
+            "slot": "african-flex",
+            "flight": "african",
+            "cabin": "ECONOMY",
+            "fare_cents": 93000,
+            "refundable": true
+          },
+          {
+            "slot": "dubai-saver",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 52000
+          },
+          {
+            "slot": "dubai-flex",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 72000,
+            "refundable": true
+          },
+          {
+            "slot": "amsterdam-flex",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 76000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_WITHIN_MARGIN",
+      "DIRECT_OPTION_WITHIN_BUDGET"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        248,
+        250
+      ],
+      "sha256": "53c0ecdb94081e1d19fb6eea16cb53c0edaa6b55e297acbb02efb8ad9ff5bd74",
+      "quote": "All flight bookings made will take account of the most cost-effective, direct route available. Where the most direct option available is within budget parameters, this option may be selected over a cheaper less direct route.",
+      "why": "the cost-effective direct route; a direct option within budget"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 249-250: the most direct option within budget may be selected over a cheaper less direct route. The British Airways flexible nonstop is 885 pounds, within the 900-pound fare budget, so it is booked as asked; the Emirates connection (720) is cheaper but need not be taken. The SAA flexible nonstop (930) is over budget."
+}

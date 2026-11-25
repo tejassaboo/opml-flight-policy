@@ -1,0 +1,202 @@
+{
+  "id": "umber-spindle",
+  "category": "flag",
+  "overlays": [
+    "multi_leg",
+    "approval_required"
+  ],
+  "twin_of": "basalt-orrery",
+  "twin_fact": "the client's written approval is or is not on file",
+  "flag_twins": [
+    "basalt-orrery",
+    "quartz-heddle"
+  ],
+  "ambiguity_note": "none: the client's written approval is required and missing; the text is clear",
+  "request": "Economy to Nairobi on 9 March for the nutrition programme's mid-term review, please. The review opens on the 11th.",
+  "trip": {
+    "traveller_name": "Daniel Price",
+    "traveller_title": "Senior Consultant, Nutrition (Washington DC office)",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "IAD",
+    "workplace_airport": "IAD",
+    "origin": "IAD",
+    "destination": "NBO",
+    "travel_date": "2027-03-09",
+    "trip_end": "2027-03-19",
+    "request_submitted": "2027-02-08",
+    "booking_date": "2027-02-10",
+    "travel_kind": "PROJECT",
+    "funder": "USAID",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Mid-term review of a USAID-funded nutrition programme in Kenya",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "NBO",
+        "date": "2027-03-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "newark": {
+            "carrier": "UA",
+            "via": [
+              "EWR"
+            ],
+            "depart": "17:50",
+            "layovers": [
+              95
+            ]
+          },
+          "kennedy": {
+            "carrier": "DL",
+            "via": [
+              "JFK"
+            ],
+            "depart": "16:30",
+            "layovers": [
+              120
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "10:15",
+            "layovers": [
+              160
+            ]
+          },
+          "doha": {
+            "carrier": "QR",
+            "via": [
+              "DOH"
+            ],
+            "depart": "18:40",
+            "layovers": [
+              140
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "newark-saver",
+            "flight": "newark",
+            "cabin": "ECONOMY",
+            "fare_cents": 89000
+          },
+          {
+            "slot": "newark-flex",
+            "flight": "newark",
+            "cabin": "ECONOMY",
+            "fare_cents": 109000,
+            "refundable": true
+          },
+          {
+            "slot": "kennedy-saver",
+            "flight": "kennedy",
+            "cabin": "ECONOMY",
+            "fare_cents": 93000
+          },
+          {
+            "slot": "kennedy-flex",
+            "flight": "kennedy",
+            "cabin": "ECONOMY",
+            "fare_cents": 115000,
+            "refundable": true
+          },
+          {
+            "slot": "dubai-saver",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 72000
+          },
+          {
+            "slot": "dubai-flex",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 96000,
+            "refundable": true
+          },
+          {
+            "slot": "doha-flex",
+            "flight": "doha",
+            "cabin": "ECONOMY",
+            "fare_cents": 99000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "newark-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "CLIENT_OR_DONOR"
+    ],
+    "clauses": [
+      "PROJECT_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        128,
+        131
+      ],
+      "sha256": "792de3d415f38e5f1a64e462db554215b4adfa513c331692b85fbf54ad18359c",
+      "quote": "All Travellers must check with their Project Manager for any client-facing compliance requirements. For example, all travel undertaken on USAID projects must be approved in writing in advance by the client, either through the prime where OPM is subcontracted, or with the client directly.",
+      "why": "USAID travel needs the client's written approval in advance"
+    },
+    {
+      "lines": [
+        272,
+        274
+      ],
+      "sha256": "d74e0de26ac774f0a452b18c5d480ab879e8361e9cff340cc5c112cd0f97962f",
+      "quote": "For projects funded by USAID, US Flag Carrier Rules apply. The Travel Booker will alert the agency to ensure options adhere to the Fly America Act provisions. Options for the Traveller in such instances may be limited.",
+      "why": "USAID projects: US Flag Carrier Rules (Fly America)"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 128-131: all travel on USAID projects must be approved in writing in advance by the client, through the prime or directly, and no such approval is on file. Hold the ticket the trip would get: United via Newark at 1,090 pounds (US carriers only, line 272; flexible economy, line 253)."
+}

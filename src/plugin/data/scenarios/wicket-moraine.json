@@ -1,0 +1,178 @@
+{
+  "id": "wicket-moraine",
+  "category": "multi_rule",
+  "overlays": [
+    "date_arithmetic",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Sorry for the short notice: the ministry moved the validation workshop in Istanbul to 9 February, so I need to fly on the 8th. Economy, please.",
+  "trip": {
+    "traveller_name": "Selin Arslan",
+    "traveller_title": "Consultant, Public Sector Governance",
+    "passenger": "STAFF",
+    "seniority": "STAFF",
+    "home_airport": "LHR",
+    "workplace_airport": "LHR",
+    "origin": "LHR",
+    "destination": "IST",
+    "travel_date": "2027-02-08",
+    "trip_end": "2027-02-11",
+    "request_submitted": "2027-02-05",
+    "booking_date": "2027-02-05",
+    "travel_kind": "PROJECT",
+    "funder": "World Bank",
+    "contract_cabin": "ECONOMY",
+    "contract_end": "",
+    "purpose": "Validation workshop for a World Bank-funded civil service reform project",
+    "purpose_kind": "PROJECT_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_nonstop": false,
+    "fare_budget_cents": 0,
+    "rail_fare_cents": 0,
+    "rail_arrival": "",
+    "sign_offs": [
+      {
+        "role": "PROJECT_MANAGER",
+        "name": "Helen Achterberg",
+        "subject": "TRIP",
+        "cabin": "NONE"
+      },
+      {
+        "role": "TSSM",
+        "name": "Mark Ellison",
+        "subject": "SHORT_NOTICE",
+        "cabin": "NONE"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "IST",
+        "date": "2027-02-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "turkish": {
+            "carrier": "TK",
+            "depart": "07:45"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "10:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "turkish-saver",
+            "flight": "turkish",
+            "cabin": "ECONOMY",
+            "fare_cents": 14800
+          },
+          {
+            "slot": "turkish-flex",
+            "flight": "turkish",
+            "cabin": "ECONOMY",
+            "fare_cents": 23900,
+            "refundable": true
+          },
+          {
+            "slot": "british-saver",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 16200
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 26400,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "turkish-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_ECONOMY_POLICY",
+      "LOWEST_FARE",
+      "URGENT_TRAVEL_APPROVED"
+    ],
+    "approvers": [
+      "NONE",
+      "PROJECT_MANAGER",
+      "TSSM"
+    ],
+    "clauses": [
+      "AIR_CLASS_AND_RATES",
+      "BOOKING_TRAVEL",
+      "GENERAL_PROVISIONS",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        117,
+        117
+      ],
+      "sha256": "1f065b6bba741c60f153ce3084ccd5b34f17e103cb5a00b652578de0ab5783fc",
+      "quote": "Travel requests must be submitted at least five days prior to Travel",
+      "why": "the request lead time"
+    },
+    {
+      "lines": [
+        123,
+        123
+      ],
+      "sha256": "afbb0e2c3a8d603eb133cd631e402f411ad52bb9036e313198b64bbe5c039332",
+      "quote": "In cases of urgent travel, please contact the TSSM.",
+      "why": "urgent travel goes to the TSSM"
+    },
+    {
+      "lines": [
+        253,
+        255
+      ],
+      "sha256": "eea93eef1c2afa5e9425fa9031b0e47d7bafb07198c72cef8627ce3ec8833455",
+      "quote": "OPM's policy is to book flexible economy class flights. Unless expressly permitted by a client contract, or where specific written approval of the client/donor has been received, quotes provided for Travel bookings will be within this class range only.",
+      "why": "flexible economy unless the client allows more"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "4f2787894eb17c820dd78b2c24d16ffd52ebed6248f53cd75405a36e4faa4f58",
+      "quote": "All Travel and associated costs must be approved by the relevant Project Manager or Line Manager prior to booking.",
+      "why": "the manager approves every trip before booking"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        120,
+        121
+      ],
+      "quote": "travel/logistical arrangements should be booked as far in advance as possible.",
+      "why": "a soft wish, not a booking condition"
+    }
+  ],
+  "design_notes": "The request went in on 5 February for travel on the 8th: three days, under the five of line 117. Line 123 sends urgent travel to the TSSM, whose sign-off for the short notice is on file, so book: the cheapest flexible economy fare, Turkish at 239 pounds."
+}
